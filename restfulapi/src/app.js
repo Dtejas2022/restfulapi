@@ -1,13 +1,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const connectDB = require("./db/conn");
+require("./db/conn");
+const Student = require("./models/students");
 const app = express();
 const port = process.env.PORT || 3000;
 
-// app.get("/",(req,res)=>{
-//     res.send("app is running");
-// });
-connectDB;
+app.get("/",(req,res)=>{
+    res.send("app is running");
+});
+
 // create a new student
 app.post("/students",(req,res)=>{
     res.send("app is running");
